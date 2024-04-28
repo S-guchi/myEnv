@@ -1,0 +1,269 @@
+{
+    "terminal.integrated.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "git.ignoreRebaseWarning": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "vim.autoSwitchInputMethod.enable": true,
+    "editor.fontSize": 16,
+    "editor.hover.enabled": false,
+    "editor.minimap.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideActivityBar": false,
+    // vim設定
+    "vim.useSystemClipboard": true,
+    "editor.renderWhitespace": "all",
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // easymotionの設定
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "2",
+                "s",
+                "<char>",
+                "<char>"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "d"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.goToDeclaration"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "b"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.navigateBack"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "h"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.showHover"
+                }
+            ]
+        },
+        {
+            "before": [
+                "u"
+            ],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        },
+        // 1文字修正したときにクリップボードへの書き込みをしない
+        {
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ]
+        },
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        },
+        // 検索で移動するときに画面中央に持ってくる
+        {
+            "before": [
+                "n"
+            ],
+            "after": [
+                "n",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "N"
+            ],
+            "after": [
+                "N",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "*"
+            ],
+            "after": [
+                "*",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "#"
+            ],
+            "after": [
+                "#",
+                "z",
+                "z"
+            ]
+        },
+        // Leader+cでその行をコメントアウトする設定。
+        {
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine"
+                }
+            ]
+        },
+        // Leader+lで行末にカーソル移動、Leader+hで行頭にカーソル移動する設定。
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        // {
+        //   "before": ["<Leader>", "h"],
+        //   "after": ["^"]
+        // },
+        // leader+mで括弧内に移動する
+        {
+            "before": [
+                "<Leader>",
+                "]"
+            ],
+            "after": [
+                "%"
+            ]
+        },
+        // leader+zで検索のハイライトを消す
+        {
+            "before": [
+                "<Leader>",
+                "z"
+            ],
+            "commands": [
+                ":noh"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        // jjでインサート抜ける
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        // ;;で補完出す
+        {
+            "before": [
+                ";",
+                ";"
+            ],
+            "commands": [
+                "editor.action.triggerSuggest"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // visualモードでの移動
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "h"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "m"
+            ],
+            "after": [
+                "%"
+            ]
+        }
+    ],
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "githubPullRequests.pullBranch": "never",
+    "workbench.activityBar.location": "top",
+    "workbench.editor.showTabs": "single",
+    "zenMode.showTabs": "single",
+    "git.openRepositoryInParentFolders": "never"
+}
