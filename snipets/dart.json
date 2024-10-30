@@ -1,0 +1,159 @@
+{
+	"stateless_widget": {
+		"prefix": "snippets_stateless_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:MyWidget} extends StatelessWidget {",
+			"  const ${1:MyWidget}({super.key});",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return const ${2:Placeholder()};",
+			"  }",
+			"}"
+		],
+	},
+	"provider_gen": {
+		"prefix": "snippets_provider_gen",
+		"body": [
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@riverpod",
+			"void ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/lowcase}${3:/upcase}/g}Controller(ref) {",
+			"  return null;",
+			"}"
+		],
+	},
+	"future_provider_gen": {
+		"prefix": "snippets_future_provider_gen",
+		"body": [
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@riverpod",
+			"Future<void> ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/lowcase}${3:/upcase}/g}Controller(ref) async {",
+			"  return null;",
+			"}"
+		],
+	},
+	"stream_provider_gen": {
+		"prefix": "snippets_stream_provider_gen",
+		"body": [
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@riverpod",
+			"Stream<void> ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/lowcase}${3:/upcase}/g}Controller(ref) async* {",
+			"  yield null;",
+			"}"
+		],
+	},
+	"notifier_gen": {
+		"prefix": "snippets_notifier_gen",
+		"body": [
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@riverpod",
+			"class ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} extends _$${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} {",
+			"",
+			"  @override",
+			"  void build () {}",
+			"}"
+		],
+	},
+	"async_notifier_gen": {
+		"prefix": "snippets_async_notifier_gen",
+		"body": [
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@riverpod",
+			"class ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} extends _$${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} {",
+			"",
+			"  @override",
+			"  FutureOr<void> build () async {}",
+			"}"
+		],
+	},
+	"freezed_file_name": {
+		"prefix": "snippets_freezed_file_name",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '${TM_FILENAME_BASE}.freezed.dart';",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@freezed",
+			"abstract class ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} with _$${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g} {",
+			"    const factory ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g}({",
+			"        required String ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/lowcase}${3:/upcase}/g}Id,",
+			"    }) = _${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g};",
+			"",
+			"    const ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g}._();",
+			"",
+			"    factory ${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g}.fromJson(Map<String, dynamic> json) => _$${TM_FILENAME_BASE/((^[a-z])|_([a-z]))/${2:/upcase}${3:/upcase}/g}FromJson(json);",
+			"}",
+			""
+		],
+	},
+	"consumer_widget": {
+		"prefix": "snippets_consumer_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_riverpod/flutter_riverpod.dart';",
+			"",
+			"class ${1:MyWidget} extends ConsumerWidget {",
+			"  const ${1:MyWidget}({super.key});",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context, WidgetRef ref) {",
+			"    return const ${2:Placeholder()};",
+			"  }",
+			"}"
+		],
+	},
+	"hook_widget": {
+		"prefix": "snippets_hook_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_hooks/flutter_hooks.dart';",
+			"",
+			"class ${1:MyWidget} extends HookWidget {",
+			"  const ${1:MyWidget}({super.key});",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return const ${2:Placeholder()};",
+			"  }",
+			"}"
+		],
+	},
+	"hook_consumer_widget": {
+		"prefix": "snippets_hook_consumer_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_hooks/flutter_hooks.dart';",
+			"import 'package:hooks_riverpod/hooks_riverpod.dart';",
+			"",
+			"class ${1:MyWidget} extends HookConsumerWidget {",
+			"  const ${1:MyWidget}({super.key});",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context, WidgetRef ref) {",
+			"",
+			"    useEffect(() {}, const []);",
+			"",
+			"    return const ${2:Placeholder()};",
+			"  }",
+			"}"
+		],
+	},
+}
