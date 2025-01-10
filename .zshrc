@@ -1,249 +1,131 @@
-export PYTHONPATH=$(pwd)
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-# >>> pyenv >>>
-# mpsエラーの対処
-export PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0
-# >>> zshカスタム >>>
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-export PATH=$HOME/command:$PATH
-# git-promptの読み込み
-source ~/.zsh/completion/git-prompt.sh
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:$HOME/google-cloud-sdk/bin
 
-# git-completionの読み込み
-fpath=(~/.zsh/completion $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/completion/git-completion.bash
-autoload -Uz compinit && compinit
+# mysql
+export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client@8.0/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client@8.0/lib/pkgconfig"
 
-# プロンプトのオプション表示設定
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
+# flutter
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
-# git ブランチ名を色付きで表示させるメソッド
-function rprompt-git-current-branch {
-  local branch_name st branch_status
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="simple"
 
-  branch='\ue0a0'
-  color='%{\e[38;5;' #  文字色を設定
-  green='114m%}'
-  red='001m%}'
-  yellow='227m%}'
-  blue='033m%}'
-  reset='%{\e[0m%}'   # reset
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-  color='%{\e[38;5;' #  文字色を設定
-  green='114m%}'
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-  # ブランチマーク
-  if [ ! -e  ".git" ]; then
-    # git 管理されていないディレクトリは何も返さない
-    return
-  fi
-    branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
-    st=`git status 2> /dev/null`
-  if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    # 全て commit されてクリーンな状態
-    branch_status="${color}${green}${branch}"
-  elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
-    # git 管理されていないファイルがある状態
-    branch_status="${color}${red}${branch}?"
-  elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
-    # git add されていないファイルがある状態
-    branch_status="${color}${red}${branch}+"
-  elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
-    # git commit されていないファイルがある状態
-    branch_status="${color}${yellow}${branch}!"
-  elif [[ -n `echo "$st" | grep "^rebase in progress"` ]]; then
-    # コンフリクトが起こった状態
-    echo "${color}${red}${branch}!(no branch)${reset}"
-    return
-  else
-    # 上記以外の状態の場合
-    branch_status="${color}${blue}${branch}"
-  fi
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-  # ブランチ名を色付きで表示する
-  echo "(${branch_status}$branch_name${reset})"
-}
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
-# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
-setopt prompt_subst
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
 
-# プロンプトの右側(RPROMPT)にメソッドの結果を表示させる
-# PROMPT='`rprompt-git-current-branch`'
-# PROMPT='%F{cyan}%~%f `rprompt-git-current-branch`
-# \$ '
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
-function git-current-branch {
-  local branch_name
-  branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
-  if [ -n "$branch_name" ]; then
-    echo "%B%F{29}◀%f%K{29}%F{15} $branch_name %f%k%b"
-  fi
-}
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-setopt prompt_subst
-# RPROMPT='%F{99}%D{%H:%M:%S}%f'
-PROMPT='%F{33}%~%f `git-current-branch`
-\$ '
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# 環境変数
-export LANG=ja_JP.UTF-8
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# 色を使用出来るようにする
-autoload -Uz colors
-colors
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
 
-export CLICOLOR=1
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# ヒストリの設定
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-# 改変箇所_1
-# 時間表記の追加
-setopt extended_history
-alias history='history -t "%F %T"'
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# プロンプト
-# 1行表示
-# PROMPT="%~ %# "
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git aliases copypath history github brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
-# PROMPT="%{${fg[blue]}%}%n:%{${reset_color}%} %c/ %# "
-# 2行表示
-# PROMPT="%{${reset_color}%}%~ %F{red}$(__git_ps1 "(%s)")%f
-# \$ "
+source $ZSH/oh-my-zsh.sh
 
-# 出力の後に改行を入れる
-function add_line {
-  if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
-    PS1_NEWLINE_LOGIN=true
-  else
-    printf '\n'
-  fi
-}
-PROMPT_COMMAND='add_line'
+# User configuration
 
-# 単語の区切り文字を指定する
-autoload -Uz select-word-style
-select-word-style default
-# ここで指定した文字は単語区切りとみなされる
-# / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
-zstyle ':zle:*' word-chars " /=;@:{},|"
-zstyle ':zle:*' word-style unspecified
+# export MANPATH="/usr/local/man:$MANPATH"
 
-########################################
-# 補完
-# 補完機能を有効にする
-autoload -Uz compinit
-compinit
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
 
-# ../ の後は今いるディレクトリを補完しない
-zstyle ':completion:*' ignore-parents parent pwd ..
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# sudo の後ろでコマンド名を補完する
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-
-# ps コマンドのプロセス名補完
-zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-
-# オプション
-# 日本語ファイル名を表示可能にする
-setopt print_eight_bit
-
-# beep を無効にする
-setopt no_beep
-
-# フローコントロールを無効にする
-setopt no_flow_control
-
-# Ctrl+Dでzshを終了しない
-setopt ignore_eof
-
-# '#' 以降をコメントとして扱う
-setopt interactive_comments
-
-# ディレクトリ名だけでcdする
-setopt auto_cd
-
-# cd したら自動的にpushdする
-setopt auto_pushd
-# 重複したディレクトリを追加しない
-setopt pushd_ignore_dups
-
-# 同時に起動したzshの間でヒストリを共有する
-setopt share_history
-
-# 同じコマンドをヒストリに残さない
-setopt hist_ignore_all_dups
-
-# スペースから始まるコマンド行はヒストリに残さない
-setopt hist_ignore_space
-
-# ヒストリに保存するときに余分なスペースを削除する
-setopt hist_reduce_blanks
-
-# 高機能なワイルドカード展開を使用する
-setopt extended_glob
-
-########################################
-# キーバインド
-
-# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
-bindkey '^R' history-incremental-pattern-search-backward
-
-########################################
-# >>> zshカスタム >>>
-
-#alias
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# $ZSH_CUSTOM/alias.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias sed='gsed'
-alias ll='ls -logG'
-alias ls='ls -logG'
-alias cl='clear'
-alias br='git branch'
-alias brd='git branch -d $1'
-alias st='git status'
-alias co='git checkout $1'
-alias add='git add $1'
-alias cm='git commit -m ''$1'''
-alias dj='python manage.py $1'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+# alias ll='ls -logG'
+# alias ls='ls -logG'
+# alias cl='clear'
+# alias br='git branch'
+# alias brd='git branch -d $1'
+# alias st='git status'
+# alias co='git checkout $1'
+# alias add='git add $1'
+# alias cm='git commit -m ''$1'''
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/haraguchi/.dart-cli-completion/zsh-config.zsh ]] && . /Users/haraguchi/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 
-
-function chpwd() {
-    if [ -d .venv ]; then
-        source .venv/bin/activate
-    fi
-    if [ -d venv ]; then
-        source .venv/bin/activate
-    fi
-}
-
-function zipwin ()
-{
-  if [ -z $1 ] || [ $1 = . ]; then
-    # 現在の作業ディレクトリをZIPファイルに圧縮する．
-    local zip_name="$(basename $(pwd)).zip"
-    fd --type file --strip-cwd-prefix . -X 7z a -tzip -scsWIN $zip_name {}
-  else
-    # 指定したディレクトリをZIPファイルに圧縮する．
-    local loc_dir=$(dirname $1)
-    local target=$(basename $1)
-    local zip_name="$(pwd)/${target}.zip"
-    fd --type file --base-directory=$loc_dir . $target -X 7z a -tzip -scsWIN $zip_name {}
-  fi
-
-  # 作成したZIPファイルに含まれるファイルを確認する．不要であればコメントアウトしてください．
-  7z l $zip_name
-
-  return 0
-}
