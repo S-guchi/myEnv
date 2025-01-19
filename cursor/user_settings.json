@@ -1,0 +1,300 @@
+{
+    "terminal.integrated.fontSize": 16,
+    "python.venvFolders": [
+        ".venv"
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "git.ignoreRebaseWarning": true,
+    "prettier.printWidth": 150,
+    "python.analysis.typeCheckingMode": "basic",
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "vim.autoSwitchInputMethod.enable": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "files.trimTrailingWhitespace": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "editor.fontSize": 16,
+    "editor.hover.enabled": false,
+    "editor.minimap.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideActivityBar": false,
+    "vim.useSystemClipboard": true,
+    "editor.renderWhitespace": "all",
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "2",
+                "s",
+                "<char>",
+                "<char>"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "d"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.goToDeclaration"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "b"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.navigateBack"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "h"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.showHover"
+                }
+            ]
+        },
+        {
+            "before": [
+                "u"
+            ],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ]
+        },
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "n"
+            ],
+            "after": [
+                "n",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "N"
+            ],
+            "after": [
+                "N",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "*"
+            ],
+            "after": [
+                "*",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "#"
+            ],
+            "after": [
+                "#",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "]"
+            ],
+            "after": [
+                "%"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "z"
+            ],
+            "commands": [
+                ":noh"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                ";",
+                ";"
+            ],
+            "commands": [
+                "editor.action.triggerSuggest"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "h"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "m"
+            ],
+            "after": [
+                "%"
+            ]
+        }
+    ],
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "python.analysis.extraPaths": [
+        "/Users/haraguchi/projects/mobicle-tour/back/.venv/lib/python3.9/site-packages"
+    ],
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "dart.flutterSdkPath": "/Users/haraguchi/flutter",
+    "dart.showInspectorNotificationsForWidgetErrors": false,
+    "githubPullRequests.pullBranch": "never",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.codeLens": false,
+    "editor.guides.bracketPairs": true,
+    "workbench.editor.showTabs": "single",
+    "zenMode.showTabs": "single",
+    "dart.lineLength": 87,
+    "flake8.path": [
+        "--max-line-length=150"
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.configureOnOpen": true,
+    "cmake.showOptionsMovedNotification": false,
+    "editor.accessibilitySupport": "on",
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+    "dart.previewFlutterUiGuides": true,
+    // 以下はオプション
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.closingLabels": false,
+
+    "background.fullscreen": {
+        "images": ["/Users/haraguchi/Documents/vscode_background/5.webp"], // urls of your images
+        "opacity": 0.91, // 0.85 ~ 0.95 recommended
+        "size": "400px 400px", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`
+        "position": "right bottom", // alias to `background-position`, default `center`
+        "interval": 0 // seconds of interval for carousel, default `0` to disabled.
+    }
+
+}
