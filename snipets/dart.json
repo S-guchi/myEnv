@@ -1,6 +1,6 @@
 {
 	"stateless_widget": {
-		"prefix": "snippets_stateless_widget",
+		"prefix": "stateless_w",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
@@ -15,7 +15,7 @@
 		],
 	},
 	"provider_gen": {
-		"prefix": "snippets_provider_gen",
+		"prefix": "normal_provider_gen",
 		"body": [
 			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
 			"",
@@ -28,7 +28,7 @@
 		],
 	},
 	"future_provider_gen": {
-		"prefix": "snippets_future_provider_gen",
+		"prefix": "future_provider_gen",
 		"body": [
 			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
 			"",
@@ -41,7 +41,7 @@
 		],
 	},
 	"stream_provider_gen": {
-		"prefix": "snippets_stream_provider_gen",
+		"prefix": "stream_provider_gen",
 		"body": [
 			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
 			"",
@@ -54,7 +54,7 @@
 		],
 	},
 	"notifier_gen": {
-		"prefix": "snippets_notifier_gen",
+		"prefix": "notifier_gen",
 		"body": [
 			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
 			"",
@@ -69,7 +69,7 @@
 		],
 	},
 	"async_notifier_gen": {
-		"prefix": "snippets_async_notifier_gen",
+		"prefix": "async_notifier_gen",
 		"body": [
 			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
 			"",
@@ -84,7 +84,7 @@
 		],
 	},
 	"freezed_file_name": {
-		"prefix": "snippets_freezed_file_name",
+		"prefix": "freezed_file_name",
 		"body": [
 			"import 'package:freezed_annotation/freezed_annotation.dart';",
 			"",
@@ -105,7 +105,7 @@
 		],
 	},
 	"consumer_widget": {
-		"prefix": "snippets_consumer_widget",
+		"prefix": "consumer_widget",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"import 'package:flutter_riverpod/flutter_riverpod.dart';",
@@ -121,7 +121,7 @@
 		],
 	},
 	"hook_widget": {
-		"prefix": "snippets_hook_widget",
+		"prefix": "hook_widget",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"import 'package:flutter_hooks/flutter_hooks.dart';",
@@ -137,7 +137,7 @@
 		],
 	},
 	"hook_consumer_widget": {
-		"prefix": "snippets_hook_consumer_widget",
+		"prefix": "hook_consumer_widget",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"import 'package:flutter_hooks/flutter_hooks.dart';",
