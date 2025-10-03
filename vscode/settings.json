@@ -1,11 +1,22 @@
 {
     "terminal.integrated.fontSize": 16,
+    "python.venvFolders": [
+        ".venv"
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
     "git.ignoreRebaseWarning": true,
+    "python.analysis.typeCheckingMode": "basic",
     "vim.autoSwitchInputMethod.defaultIM": "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
     "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
     "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
     "vim.autoSwitchInputMethod.enable": true,
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.trimTrailingWhitespace": true,
     "editor.fontSize": 16,
     "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
@@ -259,11 +270,175 @@
     ],
     "git.autofetch": true,
     "git.confirmSync": false,
+    "python.analysis.extraPaths": [
+        "/Users/haraguchi/projects/mobicle-tour/back/.venv/lib/python3.9/site-packages"
+    ],
     "files.insertFinalNewline": true,
     "editor.formatOnSave": true,
+    "dart.flutterSdkPath": "/Users/haraguchi/flutter",
+    "dart.showInspectorNotificationsForWidgetErrors": false,
     "githubPullRequests.pullBranch": "never",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.codeLens": false,
+    "editor.guides.bracketPairs": true,
     "workbench.activityBar.location": "top",
     "workbench.editor.showTabs": "single",
     "zenMode.showTabs": "single",
-    "git.openRepositoryInParentFolders": "never"
+    "dart.lineLength": 87,
+    "flake8.path": [
+        "--max-line-length=150"
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.configureOnOpen": true,
+    "cmake.showOptionsMovedNotification": false,
+    "editor.accessibilitySupport": "off",
+    "geminicodeassist.project": "culla-437801",
+    "diffEditor.codeLens": true,
+    "geminicodeassist.inlineSuggestions.enableAuto": true,
+    "chat.commandCenter.enabled": false,
+    "update.showReleaseNotes": false,
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.voiceRecordingStarted": {
+        "sound": "off"
+    },
+    "accessibility.signals.voiceRecordingStopped": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.nextEditSuggestion": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "redhat.telemetry.enabled": true,
+    "vscode_custom_css.imports": [],
+    "animations.Enabled": true,
+    "animations.Install-Method": "Apc Customize UI++",
+    "python.createEnvironment.trigger": "off",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "gitlens.rebase"
+    },
 }
